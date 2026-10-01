@@ -1,7 +1,6 @@
 import type { FilterQuery, Model, QueryOptions, UpdateQuery } from 'mongoose';
 
 export interface BaseDocument {
-  _id: unknown;
   tenantId: string;
   isDeleted?: boolean;
   createdAt?: Date;

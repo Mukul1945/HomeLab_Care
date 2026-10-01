@@ -1,7 +1,7 @@
 import { env } from '../../config/env.js';
 import { AppError } from '../../shared/errors/app-error.js';
-import { UserModel } from '../users/user.model.ts';
-import { OtpModel } from './otp.model.ts';
+import { UserModel } from '../users/user.model.js';
+import { OtpModel } from './otp.model.js';
 import {
   generateNumericOtp,
   hashOtp,
@@ -10,7 +10,7 @@ import {
   signRefreshToken,
   verifyPassword,
   verifyRefreshToken,
-} from './auth.utils.ts';
+} from './auth.utils.js';
 import type { AuthUserContext } from '@homelab/shared-types';
 
 const MAX_OTP_ATTEMPTS = 3;
