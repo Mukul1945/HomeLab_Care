@@ -65,3 +65,45 @@ export type AuthTokenPayload = AuthUserContext & {
   iat?: number;
   exp?: number;
 };
+
+export type TestParameterDTO = {
+  id: string;
+  testId: string;
+  name: string;
+  unit: string;
+  gender: 'ALL' | 'MALE' | 'FEMALE';
+  minAge: number;
+  maxAge: number;
+  normalMin: number;
+  normalMax: number;
+  criticalMin?: number;
+  criticalMax?: number;
+};
+
+export type TestCatalogDTO = {
+  id: string;
+  code: string;
+  name: string;
+  category: string;
+  specimenType: string;
+  containerColor: string;
+  fastingHours: number;
+  tatHours: number;
+  price: number;
+  isActive: boolean;
+  parameters?: TestParameterDTO[];
+};
+
+export type HealthPackageDTO = {
+  id: string;
+  code: string;
+  name: string;
+  description: string;
+  category: string;
+  tests: TestCatalogDTO[];
+  originalPrice: number;
+  discountPrice: number;
+  fastingHours: number;
+  isActive: boolean;
+};
+

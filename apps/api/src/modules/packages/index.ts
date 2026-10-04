@@ -1,5 +1,5 @@
 /**
- * Packages Domain Module Boundary
- * Materialized placeholder for V1 health package bundles & pricing.
+ * Health Packages Domain Module
  */
-export const PACKAGES_MODULE_NAME = 'packages';
+export { packageRouter } from './package.routes.js';
+export * from './package.service.js';

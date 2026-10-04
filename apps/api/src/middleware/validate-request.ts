@@ -27,7 +27,7 @@ export function validateRequest(schemas: RequestValidationSchemas) {
       if (!result.success) {
         Object.assign(fields, result.errors);
       } else {
-        req.query = result.data as unknown as Request['query'];
+        Object.assign(req.query, result.data);
       }
     }
 

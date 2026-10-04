@@ -1,5 +1,5 @@
 /**
- * Catalog Domain Module Boundary
- * Materialized placeholder for V1 master test catalog & parameter definitions.
+ * Catalog Domain Module
  */
-export const CATALOG_MODULE_NAME = 'catalog';
+export { catalogRouter } from './catalog.routes.js';
+export * from './catalog.service.js';
